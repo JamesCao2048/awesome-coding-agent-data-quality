@@ -1,0 +1,1143 @@
+[
+  {
+    "id": "swe-bench",
+    "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+    "year": 2023,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2310.06770",
+    "artifact_url": "https://www.swebench.com/",
+    "category": "construction",
+    "facets": [
+      "environment",
+      "task",
+      "verifier",
+      "protocol"
+    ],
+    "scope": "repo-level",
+    "summary_en": "Foundational issue-to-pull-request benchmark construction pipeline, connecting a repository snapshot, a natural-language issue, a reference patch, and executable tests.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": false,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "SWE-bench",
+    "artifact_label": "Project",
+    "venue_label": "ICLR 2024",
+    "affiliation": "Princeton University"
+  },
+  {
+    "id": "swe-bench-verified",
+    "title": "Introducing SWE-bench Verified",
+    "year": 2024,
+    "type": "blog",
+    "url": "https://openai.com/index/introducing-swe-bench-verified/",
+    "category": "construction",
+    "facets": [
+      "environment",
+      "task",
+      "verifier",
+      "protocol"
+    ],
+    "scope": "repo-level",
+    "summary_en": "Human-screened SWE-bench subset and public annotation rubric, useful as a baseline for checking whether issue descriptions and hidden tests define a fair task.",
+    "verification": "primary-page-reviewed",
+    "standalone_audit": false,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "SWE-bench Verified",
+    "venue_label": "Official institutional blog",
+    "affiliation": "OpenAI"
+  },
+  {
+    "id": "swe-gym",
+    "title": "Training Software Engineering Agents and Verifiers with SWE-Gym",
+    "year": 2024,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2412.21139",
+    "artifact_url": "https://github.com/SWE-Gym/SWE-Gym",
+    "category": "construction",
+    "facets": [
+      "environment",
+      "task",
+      "verifier",
+      "contamination"
+    ],
+    "scope": "repo-level",
+    "summary_en": "Builds executable training tasks from real GitHub issues, then uses the resulting interactions to train agents and trajectory verifiers.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": false,
+    "applies_to": [
+      "training-data"
+    ],
+    "display_name": "SWE-Gym",
+    "artifact_label": "Code",
+    "venue_label": "ICML 2025",
+    "affiliation": "University of California, Berkeley"
+  },
+  {
+    "id": "r2e-gym",
+    "title": "R2E-Gym: Procedural Environments and Hybrid Verifiers for Scaling Open-Weights SWE Agents",
+    "year": 2025,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2504.07164",
+    "artifact_url": "https://github.com/R2E-Gym/R2E-Gym",
+    "category": "construction",
+    "facets": [
+      "environment",
+      "task",
+      "verifier"
+    ],
+    "scope": "repo-level",
+    "summary_en": "Constructs executable training tasks from commits with synthesized tests and issue descriptions; uses test execution and learned scoring models to rank candidate repairs.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": false,
+    "applies_to": [
+      "training-data"
+    ],
+    "display_name": "R2E-Gym",
+    "artifact_label": "Code",
+    "venue_label": "COLM 2025",
+    "affiliation": "University of California, Berkeley"
+  },
+  {
+    "id": "swe-smith",
+    "title": "SWE-smith: Scaling Data for Software Engineering Agents",
+    "year": 2025,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2504.21798",
+    "artifact_url": "https://swesmith.com/",
+    "category": "construction",
+    "facets": [
+      "environment",
+      "task",
+      "verifier",
+      "contamination"
+    ],
+    "scope": "repo-level",
+    "summary_en": "Creates an environment first, then injects synthetic bugs into existing repositories and generates issue descriptions for agent training.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": false,
+    "applies_to": [
+      "training-data"
+    ],
+    "display_name": "SWE-smith",
+    "artifact_label": "Project",
+    "venue_label": "NeurIPS 2025",
+    "affiliation": "Stanford University"
+  },
+  {
+    "id": "swe-rebench",
+    "title": "SWE-rebench: An Automated Pipeline for Task Collection and Decontaminated Evaluation of Software Engineering Agents",
+    "year": 2025,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2505.20411",
+    "category": "construction",
+    "facets": [
+      "environment",
+      "task",
+      "verifier",
+      "contamination"
+    ],
+    "scope": "repo-level",
+    "summary_en": "Combines automated executable-task collection with learned quality assessment and continuously refreshed evaluation tasks.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": false,
+    "applies_to": [
+      "training-data",
+      "benchmark"
+    ],
+    "display_name": "SWE-rebench",
+    "venue_label": "NeurIPS 2025",
+    "affiliation": "Nebius"
+  },
+  {
+    "id": "swe-bench-live",
+    "title": "SWE-bench Goes Live!",
+    "year": 2025,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2505.23419",
+    "artifact_url": "https://swe-bench-live.github.io/",
+    "category": "construction",
+    "facets": [
+      "environment",
+      "task",
+      "verifier",
+      "protocol",
+      "contamination"
+    ],
+    "scope": "repo-level",
+    "summary_en": "Introduces SWE-bench-Live and RepoLaunch to collect recent real issues and automate their execution environments.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": false,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "SWE-bench-Live",
+    "artifact_label": "Project",
+    "venue_label": "NeurIPS 2025",
+    "affiliation": "Microsoft"
+  },
+  {
+    "id": "swe-factory",
+    "title": "SWE-Factory: Your Automated Factory for Issue Resolution Training Data and Evaluation Benchmarks",
+    "year": 2025,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2506.10954",
+    "artifact_url": "https://github.com/DeepSoftwareAnalytics/swe-factory",
+    "category": "construction",
+    "facets": [
+      "environment",
+      "task",
+      "verifier",
+      "protocol"
+    ],
+    "scope": "repo-level",
+    "summary_en": "Automates issue collection and environment setup, then checks whether tests fail before a reference fix and pass afterward.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": false,
+    "applies_to": [
+      "training-data",
+      "benchmark"
+    ],
+    "display_name": "SWE-Factory",
+    "artifact_label": "Code",
+    "venue_label": "FSE 2026",
+    "affiliation": "Sun Yat-sen University"
+  },
+  {
+    "id": "swe-bench-pro",
+    "title": "SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?",
+    "year": 2025,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2509.16941",
+    "category": "construction",
+    "facets": [
+      "environment",
+      "task",
+      "verifier",
+      "protocol",
+      "contamination"
+    ],
+    "scope": "repo-level",
+    "summary_en": "Constructs harder repository tasks with human-augmented requirements, explicit interfaces, reviewed tests, and containerized environments.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": false,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "SWE-Bench Pro",
+    "venue_label": "ICML 2026",
+    "affiliation": "Scale AI"
+  },
+  {
+    "id": "scaleswe",
+    "title": "Immersion in the GitHub Universe: Scaling Coding Agents to Mastery",
+    "year": 2026,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2602.09892",
+    "category": "construction",
+    "facets": [
+      "environment",
+      "task",
+      "verifier",
+      "protocol"
+    ],
+    "scope": "repo-level",
+    "summary_en": "ScaleSWE coordinates agents for Docker setup, test generation, and problem-statement synthesis from GitHub pull requests.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": false,
+    "applies_to": [
+      "training-data"
+    ],
+    "display_name": "ScaleSWE",
+    "venue_label": "Preprint 2026",
+    "affiliation": "Affiliation unverified"
+  },
+  {
+    "id": "swe-rebench-v2",
+    "title": "SWE-rebench V2: Language-Agnostic SWE Task Collection at Scale",
+    "year": 2026,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2602.23866",
+    "category": "construction",
+    "facets": [
+      "environment",
+      "task",
+      "verifier",
+      "protocol"
+    ],
+    "scope": "repo-level",
+    "summary_en": "Extends automated collection across languages, adding setup synthesis, issue-clarity filtering, and diagnostic metadata about task quality.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": false,
+    "applies_to": [
+      "training-data",
+      "benchmark"
+    ],
+    "display_name": "SWE-rebench V2",
+    "venue_label": "ICML 2026",
+    "affiliation": "Nebius"
+  },
+  {
+    "id": "swe-world",
+    "title": "SWE-World: Building Software Engineering Agents in Docker-Free Environments",
+    "year": 2026,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2602.03419",
+    "artifact_url": "https://github.com/RUCAIBox/SWE-World",
+    "category": "construction",
+    "facets": [
+      "environment",
+      "verifier",
+      "protocol"
+    ],
+    "scope": "repo-level",
+    "summary_en": "Replaces expensive repository execution with learned transition and reward models while preserving deterministic file operations.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": false,
+    "adjacent": true,
+    "applies_to": [
+      "training-data"
+    ],
+    "display_name": "SWE-World",
+    "artifact_label": "Code",
+    "venue_label": "Preprint 2026",
+    "affiliation": "Renmin University of China"
+  },
+  {
+    "id": "swe-bench-plus",
+    "title": "SWE-Bench+: Enhanced Coding Benchmark for LLMs",
+    "year": 2024,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2410.06992",
+    "artifact_url": "https://zenodo.org/records/13879453",
+    "category": "audits",
+    "facets": [
+      "task",
+      "verifier",
+      "contamination"
+    ],
+    "scope": "repo-level",
+    "summary_en": "Audits SWE-bench patches that passed existing tests and distinguishes exposed solutions, incorrect or incomplete fixes, and legitimate alternatives to the reference patch.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": true,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "SWE-Bench+",
+    "artifact_label": "Data",
+    "venue_label": "AIware 2026",
+    "affiliation": "York University"
+  },
+  {
+    "id": "patchdiff",
+    "title": "Are \"Solved Issues\" in SWE-bench Really Solved Correctly? An Empirical Study",
+    "year": 2025,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2503.15223",
+    "artifact_url": "https://github.com/ZJU-CTAG/PatchDiff",
+    "category": "audits",
+    "facets": [
+      "verifier",
+      "task",
+      "protocol"
+    ],
+    "scope": "repo-level",
+    "summary_en": "Studies test-passing SWE-bench Verified patches using broader developer tests and PatchDiff, which generates tests exposing behavioral differences between an agent patch and the reference fix.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": true,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "PatchDiff",
+    "artifact_label": "Code",
+    "venue_label": "ICSE 2026",
+    "affiliation": "Zhejiang University"
+  },
+  {
+    "id": "utboost",
+    "title": "UTBoost: Rigorous Evaluation of Coding Agents on SWE-Bench",
+    "year": 2025,
+    "type": "paper",
+    "url": "https://aclanthology.org/2025.acl-long.189/",
+    "artifact_url": "https://github.com/CUHK-Shenzhen-SE/UTBoost",
+    "category": "batch-auditing",
+    "facets": [
+      "verifier",
+      "protocol"
+    ],
+    "scope": "repo-level",
+    "summary_en": "Augments SWE-bench tests to expose previously accepted incorrect patches and separately fixes evaluation-log parsing errors that can corrupt pass/fail annotations.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": true,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "UTBoost",
+    "artifact_label": "Code",
+    "venue_label": "ACL 2025",
+    "affiliation": "The Chinese University of Hong Kong, Shenzhen"
+  },
+  {
+    "id": "spice",
+    "title": "SPICE: An Automated SWE-Bench Labeling Pipeline for Issue Clarity, Test Coverage, and Effort Estimation",
+    "year": 2025,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2507.09108",
+    "category": "batch-auditing",
+    "facets": [
+      "task",
+      "verifier"
+    ],
+    "scope": "repo-level",
+    "summary_en": "Automates SWE-bench-style dataset review with separate issue-clarity and test-adequacy assessments, following the SWE-bench Verified annotation rubric.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": true,
+    "artifact_url": "https://github.com/SAILResearch/SPICEBench",
+    "applies_to": [
+      "training-data",
+      "benchmark"
+    ],
+    "display_name": "SPICE",
+    "artifact_label": "Code & data",
+    "venue_label": "ASE 2025",
+    "affiliation": "Queen’s University"
+  },
+  {
+    "id": "openai-swe-verified-audit-2026",
+    "title": "Why SWE-bench Verified no longer measures frontier coding capabilities",
+    "year": 2026,
+    "type": "blog",
+    "url": "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/",
+    "category": "audits",
+    "facets": [
+      "task",
+      "verifier",
+      "contamination"
+    ],
+    "scope": "repo-level",
+    "summary_en": "OpenAI documents residual test/specification defects in SWE-bench Verified and evidence that frontier models can recall some benchmark solutions.",
+    "verification": "primary-page-reviewed",
+    "standalone_audit": true,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "SWE-bench Verified audit (OpenAI)",
+    "venue_label": "Official institutional blog",
+    "affiliation": "OpenAI"
+  },
+  {
+    "id": "openai-swe-pro-audit-2026",
+    "title": "Separating signal from noise in coding evaluations",
+    "year": 2026,
+    "type": "blog",
+    "url": "https://openai.com/index/separating-signal-from-noise-coding-evaluations/",
+    "category": "audits",
+    "facets": [
+      "task",
+      "verifier",
+      "environment"
+    ],
+    "scope": "repo-level",
+    "summary_en": "Audits SWE-Bench Pro through automated triage, investigator agents with repository/environment access, and independent software-engineer review.",
+    "verification": "primary-page-reviewed",
+    "standalone_audit": true,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "SWE-Bench Pro audit (OpenAI)",
+    "venue_label": "Official institutional blog",
+    "affiliation": "OpenAI"
+  },
+  {
+    "id": "task-verification-bench",
+    "title": "Can LLMs Detect Benchmark Defects? A Meta-Benchmark from Benchmark Updates",
+    "year": 2026,
+    "type": "paper",
+    "url": "https://posttrain.dev/task-verification-bench-paper.pdf",
+    "artifact_url": "https://posttrain.dev/blog/can-llms-detect-benchmark-defects",
+    "category": "meta-evaluation",
+    "facets": [
+      "task",
+      "verifier",
+      "environment",
+      "protocol"
+    ],
+    "scope": "repo-level and terminal tasks",
+    "summary_en": "Task Verification Bench evaluates whether agents can identify benchmark defects, using SWE-bench human annotations and Terminal-Bench repair histories as reference evidence.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": true,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "Task Verification Bench (TVB)",
+    "artifact_label": "Author article",
+    "venue_label": "Preprint 2026",
+    "affiliation": "Delphik"
+  },
+  {
+    "id": "benchguard",
+    "title": "Who Guards the Benchmarks? Automated Auditing of LLM Agent Benchmarks",
+    "year": 2026,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2604.24955",
+    "category": "batch-auditing",
+    "facets": [
+      "environment",
+      "task",
+      "verifier"
+    ],
+    "scope": "general",
+    "summary_en": "BenchGuard cross-checks instructions, reference programs, evaluation scripts and environment configurations, evaluated primarily on scientific agent tasks.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": true,
+    "adjacent": true,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "BenchGuard",
+    "venue_label": "Preprint 2026",
+    "affiliation": "University of Washington; Phylo, Inc."
+  },
+  {
+    "id": "auto-benchmark-audit",
+    "title": "Automated Benchmark Auditing for AI Agents and Large Language Models",
+    "year": 2026,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2605.26079",
+    "artifact_url": "https://github.com/IsThatYou/auto-bench-audit",
+    "category": "batch-auditing",
+    "facets": [
+      "environment",
+      "task",
+      "verifier",
+      "protocol"
+    ],
+    "scope": "general",
+    "summary_en": "Organizes instructions, environment files and grading code for evidence-linked audits using task materials or recorded agent runs, including coding benchmarks.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": true,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "Auto Benchmark Audit (ABA)",
+    "artifact_label": "Code",
+    "venue_label": "Preprint 2026",
+    "affiliation": "Duke University"
+  },
+  {
+    "id": "benchjack",
+    "title": "Do Androids Dream of Breaking the Game? Systematically Auditing AI Agent Benchmarks with BenchJack",
+    "year": 2026,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2605.12673",
+    "artifact_url": "https://github.com/benchjack/benchjack",
+    "category": "batch-auditing",
+    "facets": [
+      "environment",
+      "verifier",
+      "protocol"
+    ],
+    "scope": "general",
+    "summary_en": "Uses coding agents to find ways of receiving credit without completing a task, then repairs exposed grading weaknesses, including SWE-bench cases.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": true,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "BenchJack",
+    "artifact_label": "Code",
+    "venue_label": "Preprint 2026",
+    "affiliation": "University of California, Berkeley"
+  },
+  {
+    "id": "swe-bench-pro-verified",
+    "title": "SWE-Bench Pro Verified: A Reliable Benchmark for Software Engineering Agents",
+    "year": 2026,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2609.08149",
+    "artifact_url": "https://github.com/open-compass/AgentCompass",
+    "category": "audits",
+    "facets": [
+      "environment",
+      "task",
+      "verifier",
+      "contamination"
+    ],
+    "scope": "repo-level",
+    "summary_en": "Repairs SWE-Bench Pro through two tracks: reducing accessible solution/evaluation leakage and refining confirmed task-description or test defects.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": true,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "SWE-Bench Pro Verified",
+    "artifact_label": "Code",
+    "venue_label": "Preprint 2026",
+    "affiliation": "East China Normal University; Shanghai Artificial Intelligence Laboratory"
+  },
+  {
+    "id": "trace-reward-hack-detection",
+    "title": "Benchmarking Reward Hack Detection in Code Environments via Contrastive Analysis",
+    "year": 2026,
+    "type": "paper",
+    "url": "https://proceedings.mlr.press/v306/deshpande26a.html",
+    "artifact_url": "https://huggingface.co/datasets/PatronusAI/trace-dataset",
+    "category": "meta-evaluation",
+    "facets": [
+      "verifier",
+      "protocol",
+      "environment"
+    ],
+    "scope": "code-environment trajectories; adjacent to task-package audits",
+    "summary_en": "Introduces TRACE, a human-checked synthetic trajectory benchmark for evaluating reward-hack detectors in code environments; contrasts isolated classification with comparison across trajectories.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": true,
+    "adjacent": true,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "TRACE",
+    "artifact_label": "Data",
+    "venue_label": "ICML 2026",
+    "affiliation": "Patronus AI"
+  },
+  {
+    "id": "automated-transcript-audit",
+    "title": "Automated Transcript Analysis for Detecting Flaws in Agentic Benchmarks",
+    "year": 2026,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2607.27518",
+    "category": "batch-auditing",
+    "facets": [
+      "environment",
+      "task",
+      "verifier",
+      "protocol"
+    ],
+    "scope": "general",
+    "summary_en": "Develops transcript scanners for ground-truth access, tool failures, guessing and answer-format ambiguity; includes SWE-bench Verified, KernelBench and Terminal-Bench cases.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": true,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "Automated Transcript Analysis",
+    "venue_label": "Preprint 2026",
+    "affiliation": "Independent; Arcadia Impact (work completed there)"
+  },
+  {
+    "id": "evalplus",
+    "title": "Is Your Code Generated by ChatGPT Really Correct? Rigorous Evaluation of Large Language Models for Code Generation",
+    "year": 2023,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2305.01210",
+    "artifact_url": "https://github.com/evalplus/evalplus",
+    "category": "audits",
+    "facets": [
+      "verifier"
+    ],
+    "scope": "function-level",
+    "summary_en": "EvalPlus augments code-generation benchmarks with automatically generated test inputs to expose incorrect programs that small original test suites accept.",
+    "verification": "abstract-reviewed",
+    "standalone_audit": true,
+    "adjacent": true,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "EvalPlus",
+    "artifact_label": "Code",
+    "venue_label": "NeurIPS 2023",
+    "affiliation": "University of Illinois Urbana-Champaign"
+  },
+  {
+    "id": "anthropic-infrastructure-noise",
+    "title": "Quantifying infrastructure noise in agentic coding evals",
+    "year": 2026,
+    "type": "blog",
+    "url": "https://www.anthropic.com/engineering/infrastructure-noise",
+    "category": "protocol",
+    "facets": [
+      "environment",
+      "protocol"
+    ],
+    "scope": "repo-level and terminal tasks",
+    "summary_en": "Measures how sandbox resource allocation changes coding-evaluation reliability and scores.",
+    "verification": "primary-page-reviewed",
+    "standalone_audit": false,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "Infrastructure noise in coding evaluations",
+    "venue_label": "Official institutional blog",
+    "affiliation": "Anthropic"
+  },
+  {
+    "id": "terminal-bench-science-quality-checks",
+    "title": "Terminal-Bench Science: task review automation and quality rubric",
+    "year": 2026,
+    "type": "tool",
+    "url": "https://github.com/harbor-framework/terminal-bench-science/blob/main/CONTRIBUTING.md",
+    "artifact_url": "https://github.com/harbor-framework/terminal-bench-science/blob/main/rubrics/task-implementation.toml",
+    "category": "batch-auditing",
+    "facets": [
+      "environment",
+      "task",
+      "verifier"
+    ],
+    "scope": "terminal/scientific workflows; adjacent to repository repair",
+    "summary_en": "Combines static checks, rubric review, reference-solution runs and no-op runs in a task contribution workflow.",
+    "verification": "primary-page-reviewed",
+    "standalone_audit": false,
+    "adjacent": true,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "Terminal-Bench Science quality checks",
+    "artifact_label": "Rubric",
+    "venue_label": "Official project documentation",
+    "affiliation": "Harbor Framework"
+  },
+  {
+    "id": "terminal-bench-continuous",
+    "title": "Continuous Benchmarks",
+    "year": 2026,
+    "type": "blog",
+    "url": "https://www.tbench.ai/news/continuous-benchmarks",
+    "category": "batch-auditing",
+    "facets": [
+      "environment",
+      "task",
+      "verifier",
+      "protocol"
+    ],
+    "scope": "terminal tasks; operational benchmark maintenance",
+    "summary_en": "Treats benchmarks as maintained software, with production feedback informing quality checks and versioned changes.",
+    "verification": "primary-page-reviewed",
+    "standalone_audit": false,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "Continuous Benchmarks",
+    "venue_label": "Official project blog",
+    "affiliation": "Laude Institute"
+  },
+  {
+    "id": "terminal-bench-4-quality-update",
+    "title": "Terminal-Bench 4.0: resource calibration and task fixes",
+    "year": 2026,
+    "type": "blog",
+    "url": "https://www.tbench.ai/news/terminal-bench-4-0",
+    "category": "protocol",
+    "facets": [
+      "environment",
+      "task",
+      "verifier",
+      "protocol",
+      "contamination"
+    ],
+    "scope": "terminal tasks; version-specific maintenance",
+    "summary_en": "Documents task fixes, resource calibration and version rules for rerunning or regrading evaluations.",
+    "verification": "primary-page-reviewed",
+    "standalone_audit": false,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "Terminal-Bench 4.0 quality update",
+    "venue_label": "Official project blog",
+    "affiliation": "Laude Institute"
+  },
+  {
+    "id": "setupagent",
+    "title": "Automated Benchmark Generation for Repository-Level Coding Tasks",
+    "year": 2025,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2503.07701",
+    "artifact_url": null,
+    "category": "construction",
+    "facets": [
+      "environment",
+      "task",
+      "verifier"
+    ],
+    "scope": "repo-level",
+    "summary_en": "SetUpAgent turns real issue-linked pull requests into executable repository tasks by reconstructing environments and checking the reference fix against tests. Its pipeline is useful for studying setup reliability and test-level filtering during benchmark construction.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": false,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "SetUpAgent",
+    "artifact_label": null,
+    "affiliation": "LogicStar AI",
+    "venue_label": "ICML 2025"
+  },
+  {
+    "id": "swe-playground",
+    "title": "Training Versatile Coding Agents in Synthetic Environments",
+    "year": 2025,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2512.12216",
+    "artifact_url": "https://github.com/neulab/SWE-Playground",
+    "category": "construction",
+    "facets": [
+      "environment",
+      "task",
+      "verifier"
+    ],
+    "scope": "repo-level synthetic tasks",
+    "summary_en": "SWE-Playground creates synthetic repository environments and tasks for coding-agent training, with separate generation and execution checks for task tests and implementations. Its issue-adaptation experiments also connect synthetic tasks to real repository issues.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": false,
+    "applies_to": [
+      "training-data"
+    ],
+    "display_name": "SWE-Playground",
+    "artifact_label": "Code",
+    "affiliation": "Tsinghua University",
+    "venue_label": "Preprint 2025"
+  },
+  {
+    "id": "multi-swe-bench",
+    "title": "Multi-SWE-bench: A Multilingual Benchmark for Issue Resolving",
+    "year": 2025,
+    "type": "paper",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/5afa9cb1e917b898ad418216dc726fbd-Abstract-Datasets_and_Benchmarks_Track.html",
+    "artifact_url": "https://github.com/multi-swe-bench/multi-swe-bench",
+    "category": "construction",
+    "facets": [
+      "environment",
+      "task",
+      "verifier",
+      "protocol"
+    ],
+    "scope": "repo-level, multilingual",
+    "summary_en": "Multi-SWE-bench extends issue-resolution evaluation across languages and documents a construction pipeline combining runnable repository environments, patch/test execution, and human annotation. The final NeurIPS dataset contains 2,132 tasks, including the reused 500-task SWE-bench Verified subset and additional multilingual instances.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": false,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "Multi-SWE-bench",
+    "artifact_label": "Code",
+    "affiliation": "ByteDance Seed",
+    "venue_label": "NeurIPS 2025"
+  },
+  {
+    "id": "multi-swt-bench",
+    "title": "Multi-SWT-Bench: A Multilingual Benchmark for Reproduction Test Generation",
+    "year": 2026,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2609.34752",
+    "artifact_url": null,
+    "category": "construction",
+    "facets": [
+      "task",
+      "verifier"
+    ],
+    "scope": "repo-level, multilingual reproduction tests",
+    "summary_en": "Multi-SWT-Bench adapts multilingual repository issues into a benchmark for generating tests that reproduce the reported bug. It filters tasks by executing developer-written tests against buggy and fixed repository states.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": false,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "Multi-SWT-Bench",
+    "artifact_label": null,
+    "affiliation": "Kyushu University",
+    "venue_label": "Preprint 2026"
+  },
+  {
+    "id": "swe-flow",
+    "title": "Synthesizing Software Engineering Data in a Test-Driven Manner",
+    "year": 2025,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2506.09003",
+    "artifact_url": "https://github.com/Hambaobao/SWE-Flow",
+    "category": "construction",
+    "facets": [
+      "task",
+      "verifier",
+      "environment"
+    ],
+    "scope": "repository-level synthetic training and evaluation data",
+    "summary_en": "SWE-Flow synthesizes repository-level software tasks from existing tests and their runtime dependencies. It filters unusable tests and uses a runtime dependency graph to derive code-generation tasks from tested behavior.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": false,
+    "applies_to": [
+      "training-data",
+      "benchmark"
+    ],
+    "display_name": "SWE-Flow",
+    "artifact_label": "Code",
+    "affiliation": "Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences",
+    "venue_label": "ICML 2025"
+  },
+  {
+    "id": "swt-bench",
+    "title": "SWT-Bench: Testing and Validating Real-World Bug-Fixes with Code Agents",
+    "year": 2024,
+    "type": "paper",
+    "url": "https://papers.nips.cc/paper_files/paper/2024/hash/94f093b41fc2666376fb1f667fe282f3-Abstract-Conference.html",
+    "artifact_url": "https://github.com/logic-star-ai/SWT-Bench",
+    "category": "construction",
+    "facets": [
+      "environment",
+      "task",
+      "verifier"
+    ],
+    "scope": "repo-level",
+    "summary_en": "SWT-Bench evaluates whether agents can write tests that reproduce real repository bugs and validate fixes. Its construction filters issue/PR cases using execution of the reference fix and generated or collected reproduction tests.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": false,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "SWT-Bench",
+    "artifact_label": "Code",
+    "affiliation": "ETH Zurich",
+    "venue_label": "NeurIPS 2024"
+  },
+  {
+    "id": "mcts-refined-cot",
+    "title": "MCTS-Refined CoT: High-Quality Fine-Tuning Data for LLM-Based Repository Issue Resolution",
+    "year": 2025,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2506.12728",
+    "artifact_url": "https://mcts-refine.github.io/",
+    "category": "construction",
+    "facets": [
+      "task",
+      "verifier"
+    ],
+    "scope": "repository-level issue-resolution training data",
+    "summary_en": "MCTS-Refined CoT filters and refines repository-issue reasoning traces using stepwise gold-aligned checks for localization and patching. It is relevant to trajectory quality for fine-tuning, rather than a standalone task benchmark audit.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": false,
+    "applies_to": [
+      "training-data"
+    ],
+    "display_name": "MCTS-Refined CoT",
+    "artifact_label": "Project",
+    "affiliation": "Northeastern University",
+    "venue_label": "ASE 2025",
+    "adjacent": false
+  },
+  {
+    "id": "nemotron-terminal-data-engineering",
+    "title": "On Data Engineering for Scaling LLM Terminal Capabilities",
+    "year": 2026,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2602.21193",
+    "artifact_url": "https://huggingface.co/collections/nvidia/nemotron-terminal",
+    "category": "construction",
+    "facets": [
+      "environment",
+      "task",
+      "verifier",
+      "contamination"
+    ],
+    "scope": "terminal tasks, including repository-adjacent software engineering",
+    "summary_en": "This work describes engineering a large terminal-agent training corpus from seed tasks and synthetic tasks, with executable environments, test expectations, and dataset-level filtering. It is broader than repository issue resolution but includes concrete task and trajectory quality controls.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": false,
+    "applies_to": [
+      "training-data"
+    ],
+    "display_name": "Nemotron Terminal Data Engineering",
+    "artifact_label": "Dataset collection",
+    "affiliation": "NVIDIA",
+    "venue_label": "NeurIPS 2026"
+  },
+  {
+    "id": "swe-bench-multimodal",
+    "title": "SWE-bench Multimodal: Do AI Systems Generalize to Visual Software Domains?",
+    "year": 2024,
+    "type": "paper",
+    "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/07d6332ae36730707fddddba736d7b6c-Abstract-Conference.html",
+    "artifact_url": "https://www.swebench.com/multimodal.html",
+    "category": "construction",
+    "facets": [
+      "environment",
+      "task",
+      "verifier",
+      "protocol"
+    ],
+    "scope": "visual software issue-resolution benchmark",
+    "summary_en": "SWE-bench Multimodal extends issue-resolution tasks to software whose behavior is assessed through visual interfaces. The official benchmark page documents the September 2026 Multimodal V2 update with 480 tasks, reproducible selection, removal of known flaky or ungradeable tests, and environment/grading maintenance.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": false,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "SWE-bench Multimodal",
+    "artifact_label": "Benchmark",
+    "affiliation": "Stanford University",
+    "venue_label": "ICLR 2025"
+  },
+  {
+    "id": "paichecker",
+    "title": "PAIChecker: Uncovering and Checking PR-Issue Misalignment in SWE-Bench-Like Benchmarks",
+    "year": 2026,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2607.28587",
+    "artifact_url": "https://github.com/manyiResearch/PAIChecker",
+    "artifact_label": "Code and annotations",
+    "category": "batch-auditing",
+    "facets": [
+      "task",
+      "verifier"
+    ],
+    "scope": "Repository-level issue-to-PR tasks",
+    "summary_en": "PAIChecker treats mismatches between a GitHub issue and its linked pull request as a construction defect in SWE-bench-like datasets. It proposes a multi-agent checker that combines issue/PR evidence with code-level validation.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": true,
+    "applies_to": [
+      "training-data",
+      "benchmark"
+    ],
+    "display_name": "PAIChecker",
+    "venue_label": "ASE 2026",
+    "affiliation": "The Chinese University of Hong Kong, Shenzhen"
+  },
+  {
+    "id": "coding-agents-test-suite-auditors",
+    "title": "Coding Agents as Test-Suite Auditors: Finding What Official Suites Miss While Approaching What They Catch",
+    "year": 2026,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2608.01715",
+    "artifact_url": "https://github.com/xieTwim/test-suite-auditors",
+    "artifact_label": "Evidence package and research artifacts",
+    "category": "batch-auditing",
+    "facets": [
+      "verifier",
+      "task"
+    ],
+    "scope": "Competitive-programming online-judge tasks; adjacent to repository-level software-engineering benchmarks",
+    "summary_en": "This work uses coding agents to generate adversarial tests that check whether official online-judge suites accept buggy submissions. A multi-step certification process independently checks expected outputs and input legality, making the discovered verifier gaps auditable.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": true,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "Coding Agents as Test-Suite Auditors",
+    "adjacent": true,
+    "venue_label": "Preprint 2026",
+    "affiliation": "Harbin Institute of Technology"
+  },
+  {
+    "id": "swe-mutation",
+    "title": "SWE-Mutation: Can LLMs Generate Reliable Test Suites in Software Engineering?",
+    "year": 2026,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2605.22175",
+    "artifact_url": "https://github.com/Sunny4Coding/SWE-Mutation",
+    "artifact_label": "Code and benchmark",
+    "category": "meta-evaluation",
+    "facets": [
+      "verifier"
+    ],
+    "scope": "Software-engineering task test suites and generated-test evaluation",
+    "summary_en": "SWE-Mutation benchmarks the discriminative power of test suites by checking whether semantically meaningful code mutants can still pass. It also studies how an agentic mutation process changes the difficulty of evaluating test-generation systems.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": false,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "SWE-Mutation",
+    "venue_label": "ACL Findings 2026",
+    "affiliation": "University of Science and Technology of China"
+  },
+  {
+    "id": "swe-bench-verified-memory-audit",
+    "title": "Does SWE-Bench-Verified Test Agent Ability or Model Memory?",
+    "year": 2025,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2512.10218",
+    "category": "protocol",
+    "facets": [
+      "contamination",
+      "task"
+    ],
+    "scope": "Repository-level issue localization on SWE-bench Verified and comparison datasets",
+    "summary_en": "This study probes possible benchmark exposure by asking two Claude models to localize edited files from issue text with deliberately limited context. The authors report much higher localization on SWE-bench Verified than on BeetleBox and SWE-rebench, which is consistent with possible task familiarity but does not establish training-set contamination.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": true,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "SWE-bench Verified: Ability or Memory?",
+    "venue_label": "Preprint 2025",
+    "affiliation": "Central Peel Secondary School"
+  },
+  {
+    "id": "saving-swe-bench-mutation",
+    "title": "Saving SWE-Bench: A Benchmark Mutation Approach for Realistic Agent Evaluation",
+    "year": 2025,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2510.08996",
+    "artifact_url": "https://github.com/microsoft/SWE-Bench-Mutated-CAIN26",
+    "artifact_label": "Mutated benchmark and code",
+    "category": "protocol",
+    "facets": [
+      "task",
+      "protocol"
+    ],
+    "scope": "Repository-level issue-prompt realism and agent evaluation protocol",
+    "summary_en": "This work rewrites formal GitHub issues into user-style prompts derived from coding-assistant interaction patterns, then compares agent performance on the original and mutated task descriptions. It measures how task presentation can change reported bug-fixing performance, rather than auditing hidden-test correctness.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": false,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "Saving SWE-Bench",
+    "venue_label": "CAIN 2026",
+    "affiliation": "Microsoft"
+  },
+  {
+    "id": "swe-bench-pro-determinacy-audit",
+    "title": "A Determinacy Audit of SWE-bench Pro",
+    "year": 2026,
+    "type": "report",
+    "url": "https://www.june.kim/a-determinacy-audit-of-swebench-pro",
+    "artifact_url": "https://github.com/kimjune01/swebench-pro-audit",
+    "artifact_label": "Per-task receipts and audit code",
+    "category": "audits",
+    "facets": [
+      "task",
+      "verifier"
+    ],
+    "scope": "Public SWE-bench Pro task specifications and official verifiers",
+    "summary_en": "This independent report audits all 728 public SWE-bench Pro tasks for whether the materials given to a solver determine the behavior checked by hidden tests. It reports a 15.0% conservative underdetermination floor, including a mechanically supported subset, and three reference patches that fail the official verifier.",
+    "verification": "primary-page-reviewed",
+    "standalone_audit": true,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "SWE-bench Pro Determinacy Audit",
+    "venue_label": "Independent Report 2026",
+    "affiliation": "Not stated in the report"
+  },
+  {
+    "id": "probe-to-generate",
+    "title": "Probe to Generate: Program Variant-Guided Test Augmentation for Repository-Level Repair Benchmarks",
+    "year": 2026,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2604.01518",
+    "category": "batch-auditing",
+    "facets": [
+      "verifier"
+    ],
+    "scope": "Repository-level repair benchmark regression tests; evaluation on SWE-bench Verified",
+    "summary_en": "PROBE uses variants of a reference repair to identify potential gaps in a benchmark's tests. It generates additional tests that distinguish reference repairs from surviving variants, then checks their robustness under behavior-preserving transformations.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": true,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "PROBE",
+    "venue_label": "ASE 2026",
+    "affiliation": "Concordia University"
+  }
+]

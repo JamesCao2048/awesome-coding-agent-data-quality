@@ -1,0 +1,12 @@
+.cache/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Local working material; keep out of published repository content.
+/.local/
+/reports/
+/AGENTS.md
+/docs/evidence-ledger.md
+/docs/reading-notes/
+/docs/model-report-benchmark-map.md
