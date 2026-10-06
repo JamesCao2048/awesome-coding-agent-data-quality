@@ -174,3 +174,7 @@ The catalog is generated from [`data/resources.json`](data/resources.json). Run 
 ## Attribution
 
 Annotations are original. Linked papers, datasets and software retain their authors' licenses. List-structure references include [awesome-code-agents](https://github.com/EuniAI/awesome-code-agents), [awesome-coding-agent-eval](https://github.com/gudo7208/awesome-coding-agent-eval) and the [Awesome manifesto](https://github.com/sindresorhus/awesome/blob/main/awesome.md).
+
+---
+
+⭐ If you find this list useful, please consider giving it a star!
