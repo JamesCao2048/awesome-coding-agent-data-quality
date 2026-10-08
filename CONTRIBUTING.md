@@ -14,6 +14,8 @@ Add `applies_to` (`training-data`, `benchmark`, or both) according to the source
 
 Use a familiar `display_name` for quick scanning, preserve the full paper title in `title`, and label additional links accurately with `artifact_label` (`Code`, `Data`, `Project`, `Rubric` or `Author article`).
 
+Include public audit outputs when available via `result_links: [{"label": "Audit results", "url": "https://..."}]`. Link to actual findings, labels, evidence or repaired tests, and choose a label that matches the contents. A tool homepage or a promise to release results is not an audit-results link. See the [curation guide](docs/curation.md#organizing-an-entry).
+
 For papers, set `venue_label` to an officially verified conference abbreviation and year, or `Preprint YEAR` when the venue has not been verified. Set `affiliation` to the first author's institution(s) in the inspected paper version. Blogs may use the stated author organization or publishing organization. Use contemporaneous author or institutional sources to clarify a missing paper affiliation; do not substitute a current employer for the institution associated with the work. Mark unresolved affiliations as `Affiliation unverified`. Include metadata sources with the proposed change.
 
 Distinguish papers, blogs, benchmarks, datasets, and tools. Use the earliest public year, unless the entry specifically describes a later revision. Identify the source/version supporting a proposed change in the pull request; do not infer publication venues. Abstract-only entries are allowed for discovery but must be visibly labeled.

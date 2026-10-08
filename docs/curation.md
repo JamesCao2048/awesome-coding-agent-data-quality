@@ -22,6 +22,8 @@ Each work appears once in the categorized list. **Quality auditing** provides a 
 
 Use a recognizable `display_name` (for example, `ScaleSWE`) in the list and preserve the complete publication title in `title`. When an `artifact_url` is provided, set an accurate `artifact_label`, such as `Code`, `Data`, `Project`, `Rubric` or `Author article`.
 
+When a work releases public audit findings, annotations or strengthened tests, add `result_links`, an array of objects with `label` and `url`. Link directly to the dashboard, report, dataset or evidence directory and describe its contents accurately: for example, `Audit results`, `Audit labels`, `Audit evidence` or `Augmented tests`. A code repository alone does not establish that audit outputs were released. Inspect the destination and include a concrete file, field or report location with the proposed change. Do not present automatic flags as confirmed defects or promise unreleased results.
+
 ## Quality dimensions
 
 Use tags appear in the README for quick scanning. The structured catalog also records which quality dimensions a work addresses:

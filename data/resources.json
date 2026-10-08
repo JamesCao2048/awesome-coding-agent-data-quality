@@ -353,7 +353,13 @@
     "display_name": "PatchDiff",
     "artifact_label": "Code",
     "venue_label": "ICSE 2026",
-    "affiliation": "Zhejiang University"
+    "affiliation": "Zhejiang University",
+    "result_links": [
+      {
+        "label": "Audit results",
+        "url": "https://zenodo.org/records/17074796"
+      }
+    ]
   },
   {
     "id": "utboost",
@@ -377,7 +383,13 @@
     "display_name": "UTBoost",
     "artifact_label": "Code",
     "venue_label": "ACL 2025",
-    "affiliation": "The Chinese University of Hong Kong, Shenzhen"
+    "affiliation": "The Chinese University of Hong Kong, Shenzhen",
+    "result_links": [
+      {
+        "label": "Augmented tests",
+        "url": "https://github.com/CUHK-Shenzhen-SE/UTBoost/blob/main/assets/useful_scripts/augTest.json"
+      }
+    ]
   },
   {
     "id": "spice",
@@ -402,7 +414,13 @@
     "display_name": "SPICE",
     "artifact_label": "Code & data",
     "venue_label": "ASE 2025",
-    "affiliation": "Queen’s University"
+    "affiliation": "Queen’s University",
+    "result_links": [
+      {
+        "label": "Audit labels (ZIP)",
+        "url": "https://github.com/SAILResearch/SPICEBench/blob/main/data/labeled_benchmark_release.jsonl.zip"
+      }
+    ]
   },
   {
     "id": "openai-swe-verified-audit-2026",
@@ -524,7 +542,13 @@
     "display_name": "Auto Benchmark Audit (ABA)",
     "artifact_label": "Code",
     "venue_label": "Preprint 2026",
-    "affiliation": "Duke University"
+    "affiliation": "Duke University",
+    "result_links": [
+      {
+        "label": "Audit results",
+        "url": "https://autobenchaudit.com/benchmark/"
+      }
+    ]
   },
   {
     "id": "benchjack",
@@ -575,7 +599,13 @@
     "display_name": "SWE-Bench Pro Verified",
     "artifact_label": "Code",
     "venue_label": "Preprint 2026",
-    "affiliation": "East China Normal University; Shanghai Artificial Intelligence Laboratory"
+    "affiliation": "East China Normal University; Shanghai Artificial Intelligence Laboratory",
+    "result_links": [
+      {
+        "label": "Corrected tasks",
+        "url": "https://huggingface.co/datasets/opencompass/SWEBench-Pro-Verified"
+      }
+    ]
   },
   {
     "id": "trace-reward-hack-detection",
@@ -982,7 +1012,7 @@
     "year": 2026,
     "type": "paper",
     "url": "https://arxiv.org/abs/2607.28587",
-    "artifact_url": "https://github.com/manyiResearch/PAIChecker",
+    "artifact_url": "https://github.com/manyi-w/PAIChecker",
     "artifact_label": "Code and annotations",
     "category": "batch-auditing",
     "facets": [
@@ -999,7 +1029,13 @@
     ],
     "display_name": "PAIChecker",
     "venue_label": "ASE 2026",
-    "affiliation": "The Chinese University of Hong Kong, Shenzhen"
+    "affiliation": "The Chinese University of Hong Kong, Shenzhen",
+    "result_links": [
+      {
+        "label": "Audit labels",
+        "url": "https://github.com/manyi-w/PAIChecker/tree/main/labelled_data"
+      }
+    ]
   },
   {
     "id": "coding-agents-test-suite-auditors",
@@ -1024,7 +1060,13 @@
     "display_name": "Coding Agents as Test-Suite Auditors",
     "adjacent": true,
     "venue_label": "Preprint 2026",
-    "affiliation": "Harbin Institute of Technology"
+    "affiliation": "Harbin Institute of Technology",
+    "result_links": [
+      {
+        "label": "Audit evidence",
+        "url": "https://github.com/xieTwim/test-suite-auditors/blob/main/derived/exhibit_bundle.json"
+      }
+    ]
   },
   {
     "id": "swe-mutation",
@@ -1117,7 +1159,13 @@
     ],
     "display_name": "SWE-bench Pro Determinacy Audit",
     "venue_label": "Independent Report 2026",
-    "affiliation": "Not stated in the report"
+    "affiliation": "Not stated in the report",
+    "result_links": [
+      {
+        "label": "Audit labels",
+        "url": "https://github.com/kimjune01/swebench-pro-audit/blob/main/COVERAGE.md"
+      }
+    ]
   },
   {
     "id": "probe-to-generate",
@@ -1139,5 +1187,95 @@
     "display_name": "PROBE",
     "venue_label": "ASE 2026",
     "affiliation": "Concordia University"
+  },
+  {
+    "id": "deepswe",
+    "title": "DeepSWE: Measuring Frontier Coding Agents on Original, Long-Horizon Engineering Tasks",
+    "year": 2026,
+    "type": "paper",
+    "url": "https://arxiv.org/abs/2607.07946",
+    "artifact_url": "https://github.com/datacurve-ai/deep-swe",
+    "artifact_label": "Benchmark and task package",
+    "category": "construction",
+    "facets": [
+      "task",
+      "verifier",
+      "environment",
+      "contamination"
+    ],
+    "scope": "113 original repository-level coding-agent tasks and a sampled verifier comparison with SWE-Bench Pro",
+    "summary_en": "DeepSWE builds original repository-level coding-agent tasks with hand-written behavioral verifiers, checking prompt-to-verifier alignment and acceptance of reasonable implementations. Its cross-benchmark verifier comparison uses an LLM judge on sampled rollouts, so the verdicts are sample-based author analysis rather than human-established error rates.",
+    "result_links": [
+      {
+        "label": "Audited SWE-Bench Pro passing trials",
+        "url": "https://deepswe.datacurve.ai/data/v1/trials?critique=bad&dataset=swebenchpro&outcome=pass&source=cross-benchmark-analysis"
+      },
+      {
+        "label": "Audited SWE-Bench Pro failing trials",
+        "url": "https://deepswe.datacurve.ai/data/v1/trials?critique=bad&dataset=swebenchpro&outcome=fail&source=cross-benchmark-analysis"
+      }
+    ],
+    "verification": "fulltext-reviewed",
+    "standalone_audit": false,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "DeepSWE",
+    "venue_label": "Preprint 2026",
+    "affiliation": "Datacurve"
+  },
+  {
+    "id": "autotriage-failure-attribution",
+    "title": "Verifying the Verifiers: Failure Attribution for Agentic Benchmark Diagnostics and Training Data Curation",
+    "year": 2026,
+    "type": "paper",
+    "url": "https://openreview.net/forum?id=iRhaK8PsuB",
+    "category": "batch-auditing",
+    "facets": [
+      "task",
+      "environment",
+      "verifier",
+      "protocol"
+    ],
+    "scope": "Failure attribution for observed coding-agent runs; human annotation study on Terminal-Bench trajectories",
+    "summary_en": "AutoTriage classifies observed failed coding-agent runs as task faults, agent errors or infrastructure failures so faulty examples are not used as misleading negative training rewards. It uses trajectory evidence with optional sandbox execution; its human validation covers sampled runs from one software-engineering benchmark.",
+    "verification": "fulltext-reviewed",
+    "standalone_audit": true,
+    "applies_to": [
+      "training-data"
+    ],
+    "display_name": "AutoTriage",
+    "affiliation": "Abundant AI",
+    "venue_label": "ICLR 2026 RSI Workshop"
+  },
+  {
+    "id": "swe-bench-pro-gabor-audit",
+    "title": "SWE-Bench Pro is even worse",
+    "year": 2026,
+    "type": "report",
+    "url": "https://jonathanpgabor.substack.com/p/swe-bench-pro-is-even-worse",
+    "artifact_url": "https://github.com/JonathanGabor/swe-bench-pro-audit",
+    "artifact_label": "Audit code",
+    "result_links": [
+      {
+        "label": "Audit results",
+        "url": "https://github.com/JonathanGabor/swe-bench-pro-audit/tree/main/audit_results/20260127_171004"
+      }
+    ],
+    "category": "audits",
+    "facets": [
+      "task",
+      "verifier"
+    ],
+    "scope": "A reported random sample of 100 SWE-bench Pro test-split instances",
+    "summary_en": "Jonathan Gabor's independent audit uses Claude Opus 4.5 to examine tests and requirements for 100 SWE-bench Pro tasks, publishing per-instance analyses and ratings. It flags 83/100 tasks as too lenient, too strict or both; these are automated screening results, not a confirmed defect rate.",
+    "verification": "primary-page-reviewed",
+    "standalone_audit": true,
+    "applies_to": [
+      "benchmark"
+    ],
+    "display_name": "SWE-bench Pro Test-Quality Audit (Gabor)",
+    "venue_label": "Independent Report 2026",
+    "affiliation": "Not stated in the report"
   }
 ]

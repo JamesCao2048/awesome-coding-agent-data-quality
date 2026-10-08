@@ -4,7 +4,7 @@ A curated collection of **papers, tools and technical resources for trustworthy 
 
 A task can run successfully and still be a bad training or evaluation example: its instructions may omit a requirement, its tests may reject a valid solution, or an incorrect patch may receive full credit. This collection covers how those problems are prevented, discovered and repaired.
 
-**46 resources · Updated October 7, 2026**
+**49 resources · Updated October 8, 2026**
 
 **Use tags:** `Training data` identifies work on training-task data or training environments; `Benchmark` identifies work on evaluation data or evaluation reliability. Both tags appear when a work addresses both. These tags describe the quality application studied, not merely whether a paper uses a benchmark to evaluate its model.
 
@@ -18,9 +18,9 @@ The core is repository-level software-engineering tasks and agent training envir
 
 **Literature**
 
-- [Data construction and validation](#construction) (21)
-- [Quality audits and empirical studies](#audits) (7)
-- [Automated checking and repair](#batch-auditing) (11)
+- [Data construction and validation](#construction) (22)
+- [Quality audits and empirical studies](#audits) (8)
+- [Automated checking and repair](#batch-auditing) (12)
 - [Evaluating the auditors](#meta-evaluation) (3)
 - [Evaluation protocols and contamination](#protocol) (4)
 - [Quality auditing](#quality-auditing) — where to start
@@ -36,6 +36,8 @@ The core is repository-level software-engineering tasks and agent training envir
 ## Data construction and validation
 
 How training tasks, execution environments and benchmark datasets are built and screened before use.
+
+- **[DeepSWE](https://arxiv.org/abs/2607.07946)** (Preprint 2026; Datacurve) `Benchmark` — DeepSWE builds original repository-level coding-agent tasks with hand-written behavioral verifiers, checking prompt-to-verifier alignment and acceptance of reasonable implementations. Its cross-benchmark verifier comparison uses an LLM judge on sampled rollouts, so the verdicts are sample-based author analysis rather than human-established error rates. [Benchmark and task package](https://github.com/datacurve-ai/deep-swe). [Audited SWE-Bench Pro passing trials](https://deepswe.datacurve.ai/data/v1/trials?critique=bad&dataset=swebenchpro&outcome=pass&source=cross-benchmark-analysis). [Audited SWE-Bench Pro failing trials](https://deepswe.datacurve.ai/data/v1/trials?critique=bad&dataset=swebenchpro&outcome=fail&source=cross-benchmark-analysis).
 
 - **[ScaleSWE](https://arxiv.org/abs/2602.09892)** (Preprint 2026; Affiliation unverified) `Training data` — ScaleSWE coordinates agents for Docker setup, test generation, and problem-statement synthesis from GitHub pull requests.
 
@@ -85,15 +87,17 @@ How training tasks, execution environments and benchmark datasets are built and 
 
 Investigations of defects in existing datasets, tests and evaluation results.
 
-- **[SWE-bench Pro Determinacy Audit](https://www.june.kim/a-determinacy-audit-of-swebench-pro)** (2026; report; Not stated in the report) `Benchmark` — This independent report audits all 728 public SWE-bench Pro tasks for whether the materials given to a solver determine the behavior checked by hidden tests. It reports a 15.0% conservative underdetermination floor, including a mechanically supported subset, and three reference patches that fail the official verifier. [Per-task receipts and audit code](https://github.com/kimjune01/swebench-pro-audit).
+- **[SWE-bench Pro Determinacy Audit](https://www.june.kim/a-determinacy-audit-of-swebench-pro)** (2026; report; Not stated in the report) `Benchmark` — This independent report audits all 728 public SWE-bench Pro tasks for whether the materials given to a solver determine the behavior checked by hidden tests. It reports a 15.0% conservative underdetermination floor, including a mechanically supported subset, and three reference patches that fail the official verifier. [Per-task receipts and audit code](https://github.com/kimjune01/swebench-pro-audit). [Audit labels](https://github.com/kimjune01/swebench-pro-audit/blob/main/COVERAGE.md).
 
 - **[SWE-Bench Pro audit (OpenAI)](https://openai.com/index/separating-signal-from-noise-coding-evaluations/)** (2026; blog; OpenAI) `Benchmark` — Audits SWE-Bench Pro through automated triage, investigator agents with repository/environment access, and independent software-engineer review.
 
-- **[SWE-Bench Pro Verified](https://arxiv.org/abs/2609.08149)** (Preprint 2026; East China Normal University; Shanghai Artificial Intelligence Laboratory) `Benchmark` — Repairs SWE-Bench Pro through two tracks: reducing accessible solution/evaluation leakage and refining confirmed task-description or test defects. [Code](https://github.com/open-compass/AgentCompass).
+- **[SWE-bench Pro Test-Quality Audit (Gabor)](https://jonathanpgabor.substack.com/p/swe-bench-pro-is-even-worse)** (2026; report; Not stated in the report) `Benchmark` — Jonathan Gabor's independent audit uses Claude Opus 4.5 to examine tests and requirements for 100 SWE-bench Pro tasks, publishing per-instance analyses and ratings. It flags 83/100 tasks as too lenient, too strict or both; these are automated screening results, not a confirmed defect rate. [Audit code](https://github.com/JonathanGabor/swe-bench-pro-audit). [Audit results](https://github.com/JonathanGabor/swe-bench-pro-audit/tree/main/audit_results/20260127_171004).
+
+- **[SWE-Bench Pro Verified](https://arxiv.org/abs/2609.08149)** (Preprint 2026; East China Normal University; Shanghai Artificial Intelligence Laboratory) `Benchmark` — Repairs SWE-Bench Pro through two tracks: reducing accessible solution/evaluation leakage and refining confirmed task-description or test defects. [Code](https://github.com/open-compass/AgentCompass). [Corrected tasks](https://huggingface.co/datasets/opencompass/SWEBench-Pro-Verified).
 
 - **[SWE-bench Verified audit (OpenAI)](https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/)** (2026; blog; OpenAI) `Benchmark` — OpenAI documents residual test/specification defects in SWE-bench Verified and evidence that frontier models can recall some benchmark solutions.
 
-- **[PatchDiff](https://arxiv.org/abs/2503.15223)** (ICSE 2026; Zhejiang University) `Benchmark` — Studies test-passing SWE-bench Verified patches using broader developer tests and PatchDiff, which generates tests exposing behavioral differences between an agent patch and the reference fix. [Code](https://github.com/ZJU-CTAG/PatchDiff).
+- **[PatchDiff](https://arxiv.org/abs/2503.15223)** (ICSE 2026; Zhejiang University) `Benchmark` — Studies test-passing SWE-bench Verified patches using broader developer tests and PatchDiff, which generates tests exposing behavioral differences between an agent patch and the reference fix. [Code](https://github.com/ZJU-CTAG/PatchDiff). [Audit results](https://zenodo.org/records/17074796).
 
 - **[SWE-Bench+](https://arxiv.org/abs/2410.06992)** (AIware 2026; York University) `Benchmark` — Audits SWE-bench patches that passed existing tests and distinguishes exposed solutions, incorrect or incomplete fixes, and legitimate alternatives to the reference patch. [Data](https://zenodo.org/records/13879453).
 
@@ -105,27 +109,29 @@ Investigations of defects in existing datasets, tests and evaluation results.
 
 Reusable methods and tools for finding, diagnosing and repairing quality problems at scale.
 
-- **[Auto Benchmark Audit (ABA)](https://arxiv.org/abs/2605.26079)** (Preprint 2026; Duke University) `Benchmark` — Organizes instructions, environment files and grading code for evidence-linked audits using task materials or recorded agent runs, including coding benchmarks. [Code](https://github.com/IsThatYou/auto-bench-audit).
+- **[Auto Benchmark Audit (ABA)](https://arxiv.org/abs/2605.26079)** (Preprint 2026; Duke University) `Benchmark` — Organizes instructions, environment files and grading code for evidence-linked audits using task materials or recorded agent runs, including coding benchmarks. [Code](https://github.com/IsThatYou/auto-bench-audit). [Audit results](https://autobenchaudit.com/benchmark/).
 
 - **[Automated Transcript Analysis](https://arxiv.org/abs/2607.27518)** (Preprint 2026; Independent; Arcadia Impact (work completed there)) `Benchmark` — Develops transcript scanners for ground-truth access, tool failures, guessing and answer-format ambiguity; includes SWE-bench Verified, KernelBench and Terminal-Bench cases.
 
-- **[Coding Agents as Test-Suite Auditors](https://arxiv.org/abs/2608.01715)** (Preprint 2026; Harbin Institute of Technology) `Benchmark` — **Adjacent.** This work uses coding agents to generate adversarial tests that check whether official online-judge suites accept buggy submissions. A multi-step certification process independently checks expected outputs and input legality, making the discovered verifier gaps auditable. [Evidence package and research artifacts](https://github.com/xieTwim/test-suite-auditors).
+- **[Coding Agents as Test-Suite Auditors](https://arxiv.org/abs/2608.01715)** (Preprint 2026; Harbin Institute of Technology) `Benchmark` — **Adjacent.** This work uses coding agents to generate adversarial tests that check whether official online-judge suites accept buggy submissions. A multi-step certification process independently checks expected outputs and input legality, making the discovered verifier gaps auditable. [Evidence package and research artifacts](https://github.com/xieTwim/test-suite-auditors). [Audit evidence](https://github.com/xieTwim/test-suite-auditors/blob/main/derived/exhibit_bundle.json).
 
 - **[Continuous Benchmarks](https://www.tbench.ai/news/continuous-benchmarks)** (2026; blog; Laude Institute) `Benchmark` — Treats benchmarks as maintained software, with production feedback informing quality checks and versioned changes.
 
 - **[BenchJack](https://arxiv.org/abs/2605.12673)** (Preprint 2026; University of California, Berkeley) `Benchmark` — Uses coding agents to find ways of receiving credit without completing a task, then repairs exposed grading weaknesses, including SWE-bench cases. [Code](https://github.com/benchjack/benchjack).
 
-- **[PAIChecker](https://arxiv.org/abs/2607.28587)** (ASE 2026; The Chinese University of Hong Kong, Shenzhen) `Training data` `Benchmark` — PAIChecker treats mismatches between a GitHub issue and its linked pull request as a construction defect in SWE-bench-like datasets. It proposes a multi-agent checker that combines issue/PR evidence with code-level validation. [Code and annotations](https://github.com/manyiResearch/PAIChecker).
+- **[PAIChecker](https://arxiv.org/abs/2607.28587)** (ASE 2026; The Chinese University of Hong Kong, Shenzhen) `Training data` `Benchmark` — PAIChecker treats mismatches between a GitHub issue and its linked pull request as a construction defect in SWE-bench-like datasets. It proposes a multi-agent checker that combines issue/PR evidence with code-level validation. [Code and annotations](https://github.com/manyi-w/PAIChecker). [Audit labels](https://github.com/manyi-w/PAIChecker/tree/main/labelled_data).
 
 - **[PROBE](https://arxiv.org/abs/2604.01518)** (ASE 2026; Concordia University) `Benchmark` — PROBE uses variants of a reference repair to identify potential gaps in a benchmark's tests. It generates additional tests that distinguish reference repairs from surviving variants, then checks their robustness under behavior-preserving transformations.
 
 - **[Terminal-Bench Science quality checks](https://github.com/harbor-framework/terminal-bench-science/blob/main/CONTRIBUTING.md)** (2026; tool; Harbor Framework) `Benchmark` — **Adjacent.** Combines static checks, rubric review, reference-solution runs and no-op runs in a task contribution workflow. [Rubric](https://github.com/harbor-framework/terminal-bench-science/blob/main/rubrics/task-implementation.toml).
 
+- **[AutoTriage](https://openreview.net/forum?id=iRhaK8PsuB)** (ICLR 2026 RSI Workshop; Abundant AI) `Training data` — AutoTriage classifies observed failed coding-agent runs as task faults, agent errors or infrastructure failures so faulty examples are not used as misleading negative training rewards. It uses trajectory evidence with optional sandbox execution; its human validation covers sampled runs from one software-engineering benchmark.
+
 - **[BenchGuard](https://arxiv.org/abs/2604.24955)** (Preprint 2026; University of Washington; Phylo, Inc.) `Benchmark` — **Adjacent.** BenchGuard cross-checks instructions, reference programs, evaluation scripts and environment configurations, evaluated primarily on scientific agent tasks.
 
-- **[SPICE](https://arxiv.org/abs/2507.09108)** (ASE 2025; Queen’s University) `Training data` `Benchmark` — Automates SWE-bench-style dataset review with separate issue-clarity and test-adequacy assessments, following the SWE-bench Verified annotation rubric. [Code & data](https://github.com/SAILResearch/SPICEBench).
+- **[SPICE](https://arxiv.org/abs/2507.09108)** (ASE 2025; Queen’s University) `Training data` `Benchmark` — Automates SWE-bench-style dataset review with separate issue-clarity and test-adequacy assessments, following the SWE-bench Verified annotation rubric. [Code & data](https://github.com/SAILResearch/SPICEBench). [Audit labels (ZIP)](https://github.com/SAILResearch/SPICEBench/blob/main/data/labeled_benchmark_release.jsonl.zip).
 
-- **[UTBoost](https://aclanthology.org/2025.acl-long.189/)** (ACL 2025; The Chinese University of Hong Kong, Shenzhen) `Benchmark` — Augments SWE-bench tests to expose previously accepted incorrect patches and separately fixes evaluation-log parsing errors that can corrupt pass/fail annotations. [Code](https://github.com/CUHK-Shenzhen-SE/UTBoost).
+- **[UTBoost](https://aclanthology.org/2025.acl-long.189/)** (ACL 2025; The Chinese University of Hong Kong, Shenzhen) `Benchmark` — Augments SWE-bench tests to expose previously accepted incorrect patches and separately fixes evaluation-log parsing errors that can corrupt pass/fail annotations. [Code](https://github.com/CUHK-Shenzhen-SE/UTBoost). [Augmented tests](https://github.com/CUHK-Shenzhen-SE/UTBoost/blob/main/assets/useful_scripts/augTest.json).
 
 <a id="meta-evaluation"></a>
 
@@ -162,6 +168,7 @@ For automated task review, start with [SPICE](https://arxiv.org/abs/2507.09108),
 - **Building a training dataset:** start with construction and validation, then compare independent checks such as SPICE and test-strengthening methods.
 - **Interpreting a benchmark score:** check the exact version, then follow the sources under [quality audits](#audits) and [evaluation protocols](#protocol). Distinguish task defects from execution or reporting differences.
 - **Choosing an auditing method:** compare the artifacts it needs, the evidence it produces and how its findings were validated. Label agreement, defect-detection accuracy and execution success are different measurements.
+- **Inspecting reported defects:** follow the result links on each entry. Labels distinguish audit findings, released annotations and strengthened tests; automated findings are not necessarily independently confirmed defects.
 
 This is a curated collection, not an exhaustive systematic review. Inclusion does not certify a dataset or tool. Entries provide short annotations and original sources; an **Abstract only** label means the methods have not been reviewed in full text.
 

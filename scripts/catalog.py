@@ -47,12 +47,24 @@ def validate(records):
             raise ValueError(f"{name}: invalid applies_to tags")
         if not isinstance(r["standalone_audit"], bool):
             raise ValueError(f"{name}: standalone_audit must be boolean")
-        unexpected = r.keys() - (REQUIRED | {"artifact_url", "artifact_label", "adjacent"})
+        unexpected = r.keys() - (REQUIRED | {"artifact_url", "artifact_label", "adjacent", "result_links"})
         if unexpected:
             raise ValueError(f"{name}: unsupported catalog fields: {sorted(unexpected)}")
         if r.get("artifact_url") and not r.get("artifact_label"):
             raise ValueError(f"{name}: missing artifact_label")
-        for url in [r["url"], *([r["artifact_url"]] if r.get("artifact_url") else [])]:
+        result_links = r.get("result_links", [])
+        if not isinstance(result_links, list):
+            raise ValueError(f"{name}: result_links must be an array")
+        result_urls = set()
+        for result in result_links:
+            if not isinstance(result, dict) or set(result) != {"label", "url"}:
+                raise ValueError(f"{name}: each result link needs only label and url")
+            if not isinstance(result["label"], str) or not result["label"].strip() or any(c in result["label"] for c in "[]\n\r"):
+                raise ValueError(f"{name}: invalid result link label")
+            if not isinstance(result["url"], str) or result["url"] in result_urls:
+                raise ValueError(f"{name}: invalid/duplicate result URL")
+            result_urls.add(result["url"])
+        for url in [r["url"], *([r["artifact_url"]] if r.get("artifact_url") else []), *result_urls]:
             parsed = urlparse(url)
             if parsed.scheme not in {"https", "http"} or not parsed.netloc:
                 raise ValueError(f"{name}: invalid URL {url}")
@@ -69,7 +81,7 @@ A curated collection of **papers, tools and technical resources for trustworthy 
 
 A task can run successfully and still be a bad training or evaluation example: its instructions may omit a requirement, its tests may reject a valid solution, or an incorrect patch may receive full credit. This collection covers how those problems are prevented, discovered and repaired.
 
-**{len(records)} resources · Updated October 7, 2026**
+**{len(records)} resources · Updated October 8, 2026**
 
 **Use tags:** `Training data` identifies work on training-task data or training environments; `Benchmark` identifies work on evaluation data or evaluation reliability. Both tags appear when a work addresses both. These tags describe the quality application studied, not merely whether a paper uses a benchmark to evaluate its model.
 
@@ -94,8 +106,9 @@ The core is repository-level software-engineering tasks and agent training envir
             prefix = "**Adjacent.** " if r.get("adjacent") else ""
             note = " **Abstract only.**" if r["verification"] == "abstract-reviewed" else ""
             artifact = f" [{r['artifact_label']}]({r['artifact_url']})." if r.get("artifact_url") else ""
+            results = "".join(f" [{x['label']}]({x['url']})." for x in r.get("result_links", []))
             publication = r["venue_label"] if r["type"] == "paper" else f"{r['year']}; {r['type']}"
-            readme += [f"- **[{r['display_name']}]({r['url']})** ({publication}; {r['affiliation']}) {uses} — {prefix}{r['summary_en']}{note}{artifact}", ""]
+            readme += [f"- **[{r['display_name']}]({r['url']})** ({publication}; {r['affiliation']}) {uses} — {prefix}{r['summary_en']}{note}{artifact}{results}", ""]
     readme += """## Quality auditing
 
 For automated task review, start with [SPICE](https://arxiv.org/abs/2507.09108), which labels issue clarity and test adequacy, and [Auto Benchmark Audit (ABA)](https://arxiv.org/abs/2605.26079), which investigates defects using task materials or recorded runs. To assess whether an auditor finds the right defect, [Task Verification Bench (TVB)](https://posttrain.dev/task-verification-bench-paper.pdf) provides reference defects and scoring; its role is covered under [Evaluating the auditors](#meta-evaluation).
@@ -105,6 +118,7 @@ For automated task review, start with [SPICE](https://arxiv.org/abs/2507.09108),
 - **Building a training dataset:** start with construction and validation, then compare independent checks such as SPICE and test-strengthening methods.
 - **Interpreting a benchmark score:** check the exact version, then follow the sources under [quality audits](#audits) and [evaluation protocols](#protocol). Distinguish task defects from execution or reporting differences.
 - **Choosing an auditing method:** compare the artifacts it needs, the evidence it produces and how its findings were validated. Label agreement, defect-detection accuracy and execution success are different measurements.
+- **Inspecting reported defects:** follow the result links on each entry. Labels distinguish audit findings, released annotations and strengthened tests; automated findings are not necessarily independently confirmed defects.
 
 This is a curated collection, not an exhaustive systematic review. Inclusion does not certify a dataset or tool. Entries provide short annotations and original sources; an **Abstract only** label means the methods have not been reviewed in full text.
 
